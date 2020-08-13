@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1-SNAPSHOT1</version>
 	
 	<name>Maven Web Application</name>
 	<url>http://mithuntechnologies.com</url>
@@ -23,15 +23,36 @@
 		<spring.version>5.0.2.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
+		<!--<sonar.host.url>http://13.233.128.215:9000/</sonar.host.url>-->
 		<sonar.host.url>http://13.126.53.183:9000/</sonar.host.url>
-
+		<!--
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
+		-->
+		<sonar.login>61a748cdd24b422f13b9d973ea07e4fd674e7b25</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+	<repositories>
+		<repository>
+		<id>nexus</id>
+		<url>http://15.207.117.217:2525/nskptech/repository/nexus-proxyrep/</url>
+		</repository>
+	</repositories>
+
+
 	<dependencies>
 
 		<!-- test dependencies -->
+		
+		<dependency>
+        <groupId>com.nskp</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.0</version>
+       </dependency>
+
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -83,19 +104,22 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
+		
 	</dependencies>
 	
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.233.113.232:8081/repository/mt-releases/</url>
+	      <id>nexus</id><!--this and maven home inside severs give the same              -->
+	      <name>nskptech Releases Nexus Repository</name>
+	      <!--<url>http://13.233.113.232:8081/repository/mt-releases/</url>-->
+		  <url>http://15.207.117.217:2525/nskptech/repository/firstsample-repo1/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.233.113.232:8081/repository/mt-snapshots/</url>
+	      <!--<url>http://13.233.113.232:8081/repository/mt-snapshots/</url>-->
+		  <url>http://15.207.117.217:2525/nskptech/repository/firstSample-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
@@ -117,3 +141,4 @@
 
 	
 </project>
+
