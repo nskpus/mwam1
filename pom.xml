@@ -24,11 +24,11 @@
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		<!--<sonar.host.url>http://13.233.128.215:9000/</sonar.host.url>-->
-		<sonar.host.url>http://13.126.53.183:9000/</sonar.host.url>
-		<!--
+		<!--<sonar.host.url>http://13.126.53.183:9000/</sonar.host.url>-->
+		
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
-		-->
+	
 		<sonar.login>61a748cdd24b422f13b9d973ea07e4fd674e7b25</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -37,7 +37,7 @@
 	<repositories>
 		<repository>
 		<id>nexus</id>
-		<url>http://15.207.117.217:2525/nskptech/repository/nexus-proxyrep/</url>
+		<url>http://52.66.245.58:2525/nskptech/repository/nexus-proxyrep/</url>
 		</repository>
 	</repositories>
 
@@ -113,13 +113,13 @@
 	      <id>nexus</id><!--this and maven home inside severs give the same              -->
 	      <name>nskptech Releases Nexus Repository</name>
 	      <!--<url>http://13.233.113.232:8081/repository/mt-releases/</url>-->
-		  <url>http://15.207.117.217:2525/nskptech/repository/firstsample-repo1/</url>
+		  <url>http://52.66.245.58:2525/nskptech/repository/firstsample-repo1/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <!--<url>http://13.233.113.232:8081/repository/mt-snapshots/</url>-->
-		  <url>http://15.207.117.217:2525/nskptech/repository/firstSample-snapshot/</url>
+		  <url>http://52.66.245.58:2525/nskptech/repository/firstSample-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
